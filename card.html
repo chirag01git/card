@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        html, body {
+    height: 100%;   /* zaroori hai */
+    margin: 0;
+    padding: 0;
+}
+
+
+        body {
+    overflow: hidden; /* optional, agar scrollbar nahi chahiye */
+}
+
+        .container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #8BC6EC;
+            background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+            
+        }
+        .box{
+            width: 780px;
+            height: 450px;
+            display: flex;
+            flex-direction: row;
+            border: 1px solid black;
+            justify-content: space-between;
+        }
+        .leftbox{
+            background-color:rgb(49, 17, 49);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .leftbox h2{
+            font-size: 2.5rem;
+            color: white;
+        }
+        .leftbox p{
+            color: white;
+            font-size: 1em;
+            margin-top: 15px;
+        }
+        .stats{
+            display: flex;
+            justify-content: space-between;
+            /* margin-top: 20px; */
+        }
+         .stats div {
+                text-align: center;
+           }
+         .stats h3{
+            font-size: 1.5rem;
+            margin-top: 5px;
+         }
+         .stats p{
+            font-size: 0.85rem;
+             color: #bbb;
+
+         }
+         .leftbox,.rightbox{
+            flex: 1;
+         }
+        
+         
+         
+        .rightbox img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+         /* Overlay effect */
+        .rightbox::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%; /* start outside */
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5); /* black overlay */
+            transition: left 1s ease; /* adjust speed */
+        }
+
+        .rightbox:hover::before {
+            left: 0; /* slide overlay in */
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="leftbox">
+               <div>
+                 <h2>Get insights that help your buisness grow</h2>
+                <br/>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis vel vitae perferendis nam illo corporis deleniti? Hic est beatae perspiciatis.</p>
+               </div>
+               
+               <div class="stats">
+                <div>
+                    <h3>10K+</h3>
+                    <p>Comments</p>
+                </div>
+                <div>
+                    <h3>214</h3>
+                    <p>Paid Users</p>
+                </div>
+                <div>
+                    <h3>12M+</h3>
+                    <p>Views</p>
+                </div>
+               </div>
+
+            </div>
+            <div class="rightbox">
+                <img src="https://d6xcmfyh68wv8.cloudfront.net/newsroom-content/uploads/2021/07/New-Project-18.jpg" height="700px" width="800px" object-fit: cover;  alt="img">
+            </div>
+        
+
+        </div>
+
+    </div>
+</body>
+</html>
